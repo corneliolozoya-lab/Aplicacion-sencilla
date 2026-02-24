@@ -1,0 +1,1 @@
+La aplicación es un sistema básico de gestión de estudiantes desarrollado en PHP usando programación orientada a objetos. Se creó una clase llamada Estudiante con atributos, un constructor y métodos. En el archivo principal se instancian objetos y se muestran sus datos.
