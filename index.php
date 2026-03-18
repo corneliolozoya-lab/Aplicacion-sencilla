@@ -1,11 +1,19 @@
 <?php
-include "Estudiante.php";
+include "EstudianteIngenieria.php";
+include "EstudianteSistemas.php";
 
-// Instanciación de objetos
-$estudiante1 = new Estudiante("Juan Pérez", "A12345", "Ingeniería");
-$estudiante2 = new Estudiante("María López", "B67890", "Sistemas");
+// Crear objetos de clases derivadas
+$estudiantes = [
+    new EstudianteIngenieria("Juan Pérez", "A12345", "Ingeniería", "Industrial"),
+    new EstudianteSistemas("María López", "B67890", "Sistemas", "Python")
+];
 
 echo "<h2>Lista de Estudiantes</h2>";
-echo $estudiante1->mostrarDatos();
-echo $estudiante2->mostrarDatos();
+
+// Mostrar datos
+foreach ($estudiantes as $estudiante) {
+    echo "<div style='border:1px solid #ccc; padding:10px; margin:10px;'>";
+    echo $estudiante->mostrarDatos();
+    echo "</div>";
+}
 ?>
